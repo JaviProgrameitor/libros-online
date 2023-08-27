@@ -1,0 +1,135 @@
+:root {
+  --width-foto: 400px;
+  --tamaño: 50px;
+  --color-libro: beige;
+}
+
+.atropos-shadow {
+  display: none !important;
+}
+
+.contenedor__portada {
+  display: flex;
+  justify-content: center;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.portada {
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+}
+
+.portada__fondo {
+  width: var(--width-foto);
+  height: calc(100% - 4px);
+  background-color: var(--color-libro);
+
+  position: absolute;
+}
+
+.portada__imagen {
+  width: var(--width-foto);
+  filter: grayscale(100%);
+}
+
+.portada__titulo {
+  width: var(--width-foto);
+  position: absolute;
+  left: 0;
+}
+
+.portada__sinopsis {
+  width: var(--width-foto);
+}
+
+.bordes {
+  height: calc(100% - 4px);
+  width: var(--tamaño);
+  background-color: red;
+  position: absolute;
+}
+
+.bordes-superiores {
+  height: var(--tamaño);
+  width: 100%;
+  background-color: red;
+  position: absolute;
+}
+
+.borde-izquierdo {
+  top: 0;
+  background-color: brown;
+
+  transform-origin: left center;
+  transform: translateZ(calc(var(--tamaño) * -1)) rotateY(-90deg);
+
+  transform-style: preserve-3d;
+  perspective: 1500px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.caja-barra__lateral {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.barra__lateral {
+  width: calc(var(--width-foto) + calc(35*(var(--width-foto)/100)));
+  height: var(--tamaño);
+  background-image: url(../../img//texto.png);
+  background-size: 100% 100%;
+
+  position: absolute;
+  top: 40%;
+
+  transform: translateX(calc(calc(calc(var(--width-foto) + calc(35*(var(--width-foto)/100))) - var(--tamaño)) / 2 * -1)) rotateZ(-90deg);
+}
+
+.borde-derecho {
+  top: 0;
+  right: 0;
+  background-color: none;
+  background-image: url(../../img/rayas.jpeg);
+  background-size: 100%;
+
+  transform-origin: right center;
+  transform:  rotateY(-90deg);
+}
+
+.borde-arriba {
+  top: 0;
+  background-color: none;
+  background-image: url(../../img/rayas_horizontal.jpeg);
+  background-size: 100%;
+
+  perspective-origin: top;
+  transform: translateY(calc(var(--tamaño) / 2 * -1)) translateZ(calc(var(--tamaño) / 2 * -1)) rotateX(90deg);
+}
+
+.borde-abajo {
+  bottom: 0;
+  background-color: none;
+  background-image: url(../../img/rayas_horizontal.jpeg);
+  background-size: 100%;
+
+  perspective-origin: bottom;
+  transform: translateY(calc(var(--tamaño) / 2 - 4px)) translateZ(calc(var(--tamaño) / 2 * -1)) rotateX(90deg);
+}
+
+.borde-atras {
+  width: var(--width-foto);
+  height: calc(100% - 4px);
+  background-color: var(--color-libro);
+
+  position: absolute;
+  top: 0;
+  transform: translateZ(calc(var(--tamaño) * -1)) rotateY(180deg);
+}

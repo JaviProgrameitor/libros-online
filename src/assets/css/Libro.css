@@ -1,0 +1,142 @@
+.container-libro {
+  box-sizing: border-box;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 50px 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.container-libro__contenido {
+  width: 100%;
+  height: 100%;
+  border: 8px double white;
+
+  padding: 20px;
+}
+
+.flecha-regreso {
+  color: white;
+  font-size: 35px;
+}
+
+.contenido__historia {
+  height: calc(100% - 47px);
+  display: flex;
+  align-items: center;
+
+  transition: 1s ease;
+}
+
+.historia-activa {
+  justify-content: center;
+}
+
+.container-libro__contenido-titulo {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+}
+
+.container-libro__contenido-subtitulo {
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+}
+
+.container-libro__portada {
+  width: 250px;
+  margin-top: 40px;
+  position: relative;
+  background-color: beige;
+}
+
+.container-libro__portada-imagen {
+  width: 100%;
+}
+
+.imagen-principal {
+  filter: grayscale(100%);
+}
+
+.diferente {
+  position: absolute;
+  left: 0;
+}
+
+.texto {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.contenido__botones {
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.boton {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.demoPage {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  position: relative;
+}
+
+.demoPage-portada {
+  background-color: beige;
+}
+
+.demoPage img {
+  width: 100%;
+  position: absolute;
+}
+
+.demoPage span {
+  font-size: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+.img-1 {
+  filter: grayscale(100%);
+}
+
+.demo {
+  background-color: black;
+}
+
+.left {
+  border-right: 0;
+  box-shadow: inset -7px 0 30px -7px rgba(0,0,0,.4);
+}
+
+.right {
+  border-left: 0;
+  box-shadow: inset 7px 0 30px -7px rgba(0,0,0,.4);
+}
+
+@media (max-width: 800px) {
+  .container-libro {
+    padding: 50px 10px;
+  }
+
+  .caja__flecha-regreso {
+    padding: 12px 0 0 12px;
+  }
+
+  .container-libro__contenido {
+    padding: 0;
+  }
+}
