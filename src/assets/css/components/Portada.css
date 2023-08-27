@@ -133,3 +133,12 @@
   top: 0;
   transform: translateZ(calc(var(--tamaño) * -1)) rotateY(180deg);
 }
+
+@media (max-width: 600px) {
+  :root {
+    --width-foto: 350px;
+    --tamaño: 50px;
+    --color-libro: beige;
+  }
+  
+}
